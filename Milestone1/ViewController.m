@@ -7,15 +7,21 @@
 //
 
 #import "ViewController.h"
+#import "YouAreHereController.h"
 
 @interface ViewController ()
 
 @end
 
+extern NSString *NameID;
+
 @implementation ViewController
+
+@synthesize Name;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NameID = @"Name";
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,4 +30,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sendName:(id)sender {
+    NameID = Name.text;
+    YouAreHereController *herecontroller = [[YouAreHereController alloc] init];
+    herecontroller.data = Name.text;
+    [self.navigationController pushViewController:herecontroller animated:YES];
+}
 @end

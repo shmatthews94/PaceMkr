@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <MapKit/MKAnnotation.h>
 #import <CoreLocation/CoreLocation.h>
 
 
 @interface YouAreHereController : UIViewController <CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocation *current;
-@property (nonatomic, strong) CLLocation *current2;
 @property (nonatomic,retain) CLLocationManager *locationManager;
-@property (nonatomic,retain) MKDirectionsResponse *response;
-
+@property (weak, nonatomic) IBOutlet UILabel *latitude;
+@property (weak, nonatomic) IBOutlet UILabel *longitude;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (nonatomic, retain) NSString *data;
 @end

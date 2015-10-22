@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)sendName:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *Name;
 
 
 @end

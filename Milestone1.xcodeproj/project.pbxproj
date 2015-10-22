@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D57E24B1BD8829E0000E586 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24A1BD8829E0000E586 /* CoreLocation.framework */; };
+		7D57E24D1BD882AB0000E586 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24C1BD882AB0000E586 /* MapKit.framework */; };
+		7D57E24F1BD88F760000E586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24E1BD88F760000E586 /* Foundation.framework */; };
+		7D57E2511BD88F820000E586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E2501BD88F820000E586 /* UIKit.framework */; };
+		7D57E2531BD898010000E586 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E2521BD898010000E586 /* CoreGraphics.framework */; };
 		DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B39A81BD778E200505BEA /* YouAreHereController.m */; settings = {ASSET_TAGS = (); }; };
 		DDD1CF151BD6D4F50016656E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF141BD6D4F50016656E /* main.m */; };
 		DDD1CF181BD6D4F50016656E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF171BD6D4F50016656E /* AppDelegate.m */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D57E24A1BD8829E0000E586 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7D57E24C1BD882AB0000E586 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D57E24E1BD88F760000E586 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7D57E2501BD88F820000E586 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7D57E2521BD898010000E586 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DD5B39A71BD778E200505BEA /* YouAreHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouAreHereController.h; sourceTree = "<group>"; };
 		DD5B39A81BD778E200505BEA /* YouAreHereController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouAreHereController.m; sourceTree = "<group>"; };
 		DDD1CF101BD6D4F50016656E /* Milestone1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milestone1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +83,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D57E2531BD898010000E586 /* CoreGraphics.framework in Frameworks */,
+				7D57E2511BD88F820000E586 /* UIKit.framework in Frameworks */,
+				7D57E24F1BD88F760000E586 /* Foundation.framework in Frameworks */,
+				7D57E24D1BD882AB0000E586 /* MapKit.framework in Frameworks */,
+				7D57E24B1BD8829E0000E586 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +111,11 @@
 		DDD1CF071BD6D4F50016656E = {
 			isa = PBXGroup;
 			children = (
+				7D57E2521BD898010000E586 /* CoreGraphics.framework */,
+				7D57E2501BD88F820000E586 /* UIKit.framework */,
+				7D57E24E1BD88F760000E586 /* Foundation.framework */,
+				7D57E24C1BD882AB0000E586 /* MapKit.framework */,
+				7D57E24A1BD8829E0000E586 /* CoreLocation.framework */,
 				DDD1CF121BD6D4F50016656E /* Milestone1 */,
 				DDD1CF2C1BD6D4F50016656E /* Milestone1Tests */,
 				DDD1CF371BD6D4F60016656E /* Milestone1UITests */,
