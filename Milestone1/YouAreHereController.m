@@ -18,6 +18,7 @@
 @end
 
 extern NSString *NameID;
+extern NSString *THR;
 
 @implementation YouAreHereController
 @synthesize locationManager;
@@ -25,6 +26,7 @@ extern NSString *NameID;
 @synthesize current;
 @synthesize name;
 @synthesize data;
+@synthesize targetheartrate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,6 +62,7 @@ extern NSString *NameID;
             latitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.latitude];
             longitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.longitude];
             name.text = NameID;
+            targetheartrate.text = THR;
             NSLog(@"lat is %f : lon is %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
             
         } else {

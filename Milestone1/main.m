@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 
 NSString *NameID;
+NSString *Age;
+NSString *THR;
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

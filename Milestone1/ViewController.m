@@ -14,10 +14,13 @@
 @end
 
 extern NSString *NameID;
+extern NSString *Age;
+extern NSString *THR;
 
 @implementation ViewController
 
 @synthesize Name;
+@synthesize AgeText;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +35,12 @@ extern NSString *NameID;
 
 - (IBAction)sendName:(id)sender {
     NameID = Name.text;
+    Age = AgeText.text;
+    int userage = [AgeText.text intValue];
+    int hr = 220 - userage;
+    hr = hr * .7;
+    NSString* targetratestring = [NSString stringWithFormat:@"%i", hr];
+    THR = targetratestring;
     YouAreHereController *herecontroller = [[YouAreHereController alloc] init];
     herecontroller.data = Name.text;
     [self.navigationController pushViewController:herecontroller animated:YES];

@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 - (IBAction)sendName:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *Name;
+@property (weak, nonatomic) IBOutlet UITextField *AgeText;
+
 
 
 @end
