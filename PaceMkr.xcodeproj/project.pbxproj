@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2A54791BE16F590056D5E4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A54781BE16F590056D5E4 /* MapViewController.m */; };
 		7D57E24B1BD8829E0000E586 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24A1BD8829E0000E586 /* CoreLocation.framework */; };
 		7D57E24D1BD882AB0000E586 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24C1BD882AB0000E586 /* MapKit.framework */; };
 		7D57E24F1BD88F760000E586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24E1BD88F760000E586 /* Foundation.framework */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D2A54771BE16F590056D5E4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7D2A54781BE16F590056D5E4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7D57E24A1BD8829E0000E586 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D57E24C1BD882AB0000E586 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7D57E24E1BD88F760000E586 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 				DDD1CF131BD6D4F50016656E /* Supporting Files */,
 				DD5B39A71BD778E200505BEA /* YouAreHereController.h */,
 				DD5B39A81BD778E200505BEA /* YouAreHereController.m */,
+				7D2A54771BE16F590056D5E4 /* MapViewController.h */,
+				7D2A54781BE16F590056D5E4 /* MapViewController.m */,
 			);
 			name = PaceMkr;
 			path = Milestone1;
@@ -324,6 +329,7 @@
 			files = (
 				DDD1CF1B1BD6D4F50016656E /* ViewController.m in Sources */,
 				DDD1CF181BD6D4F50016656E /* AppDelegate.m in Sources */,
+				7D2A54791BE16F590056D5E4 /* MapViewController.m in Sources */,
 				DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */,
 				DDD1CF151BD6D4F50016656E /* main.m in Sources */,
 			);
