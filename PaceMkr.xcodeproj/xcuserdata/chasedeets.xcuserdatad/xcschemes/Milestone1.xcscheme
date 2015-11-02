@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDD1CF0F1BD6D4F50016656E"
-            BuildableName = "Milestone1.app"
-            BlueprintName = "Milestone1"
-            ReferencedContainer = "container:Milestone1.xcodeproj">
+            BuildableName = "PaceMkr.app"
+            BlueprintName = "PaceMkr"
+            ReferencedContainer = "container:PaceMkr.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDD1CF0F1BD6D4F50016656E"
-            BuildableName = "Milestone1.app"
-            BlueprintName = "Milestone1"
-            ReferencedContainer = "container:Milestone1.xcodeproj">
+            BuildableName = "PaceMkr.app"
+            BlueprintName = "PaceMkr"
+            ReferencedContainer = "container:PaceMkr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

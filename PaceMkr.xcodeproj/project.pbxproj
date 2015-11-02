@@ -13,7 +13,9 @@
 		7D57E24F1BD88F760000E586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24E1BD88F760000E586 /* Foundation.framework */; };
 		7D57E2511BD88F820000E586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E2501BD88F820000E586 /* UIKit.framework */; };
 		7D57E2531BD898010000E586 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E2521BD898010000E586 /* CoreGraphics.framework */; };
+		DD26F4A71BE7D65F0035E8C8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */; };
 		DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B39A81BD778E200505BEA /* YouAreHereController.m */; };
+		DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */; };
 		DDD1CF151BD6D4F50016656E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF141BD6D4F50016656E /* main.m */; };
 		DDD1CF181BD6D4F50016656E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF171BD6D4F50016656E /* AppDelegate.m */; };
 		DDD1CF1B1BD6D4F50016656E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF1A1BD6D4F50016656E /* ViewController.m */; };
@@ -55,8 +57,11 @@
 		7D57E24E1BD88F760000E586 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7D57E2501BD88F820000E586 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7D57E2521BD898010000E586 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD26F4A51BE7D65F0035E8C8 /* PaceMkr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PaceMkr.entitlements; sourceTree = SOURCE_ROOT; };
+		DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		DD5B39A71BD778E200505BEA /* YouAreHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouAreHereController.h; sourceTree = "<group>"; };
 		DD5B39A81BD778E200505BEA /* YouAreHereController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouAreHereController.m; sourceTree = "<group>"; };
+		DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medical_heart_rate-512.png"; sourceTree = "<group>"; };
 		DDD1CF101BD6D4F50016656E /* PaceMkr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaceMkr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD1CF141BD6D4F50016656E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDD1CF161BD6D4F50016656E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 				7D57E2531BD898010000E586 /* CoreGraphics.framework in Frameworks */,
 				7D57E2511BD88F820000E586 /* UIKit.framework in Frameworks */,
 				7D57E24F1BD88F760000E586 /* Foundation.framework in Frameworks */,
+				DD26F4A71BE7D65F0035E8C8 /* HealthKit.framework in Frameworks */,
 				7D57E24D1BD882AB0000E586 /* MapKit.framework in Frameworks */,
 				7D57E24B1BD8829E0000E586 /* CoreLocation.framework in Frameworks */,
 			);
@@ -114,6 +120,7 @@
 		DDD1CF071BD6D4F50016656E = {
 			isa = PBXGroup;
 			children = (
+				DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */,
 				7D57E2521BD898010000E586 /* CoreGraphics.framework */,
 				7D57E2501BD88F820000E586 /* UIKit.framework */,
 				7D57E24E1BD88F760000E586 /* Foundation.framework */,
@@ -139,6 +146,7 @@
 		DDD1CF121BD6D4F50016656E /* PaceMkr */ = {
 			isa = PBXGroup;
 			children = (
+				DD26F4A51BE7D65F0035E8C8 /* PaceMkr.entitlements */,
 				DDD1CF161BD6D4F50016656E /* AppDelegate.h */,
 				DDD1CF171BD6D4F50016656E /* AppDelegate.m */,
 				DDD1CF191BD6D4F50016656E /* ViewController.h */,
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				DDD1CF501BD6F3360016656E /* mapPinIcon.png */,
+				DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */,
 				DDD1CF4E1BD6F20C0016656E /* space-bg.jpg */,
 				DDD1CF4C1BD6F10E0016656E /* earth-no-background.png */,
 				DDD1CF4A1BD6EFF20016656E /* the_univese_bg.jpg */,
@@ -258,6 +267,12 @@
 				TargetAttributes = {
 					DDD1CF0F1BD6D4F50016656E = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 59U4TU4946;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					DDD1CF281BD6D4F50016656E = {
 						CreatedOnToolsVersion = 7.0;
@@ -303,6 +318,7 @@
 				DDD1CF511BD6F3360016656E /* mapPinIcon.png in Resources */,
 				DDD1CF1E1BD6D4F50016656E /* Main.storyboard in Resources */,
 				DDD1CF4D1BD6F10E0016656E /* earth-no-background.png in Resources */,
+				DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,10 +488,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PaceMkr.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Milestone1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChaneMeets.PaceMkr;
 				PRODUCT_NAME = PaceMkr;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -483,10 +503,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PaceMkr.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Milestone1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChaneMeets.PaceMkr;
 				PRODUCT_NAME = PaceMkr;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
