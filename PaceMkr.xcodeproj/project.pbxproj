@@ -16,6 +16,9 @@
 		DD26F4A71BE7D65F0035E8C8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */; };
 		DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B39A81BD778E200505BEA /* YouAreHereController.m */; };
 		DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */; };
+		DDCFC8A61BE82FFC00D6FF51 /* HeartRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCFC8A51BE82FFC00D6FF51 /* HeartRateViewController.m */; };
+		DDCFC8A81BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A71BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png */; };
+		DDCFC8AB1BEAB87100D6FF51 /* NoWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCFC8AA1BEAB87100D6FF51 /* NoWatchViewController.m */; };
 		DDD1CF151BD6D4F50016656E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF141BD6D4F50016656E /* main.m */; };
 		DDD1CF181BD6D4F50016656E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF171BD6D4F50016656E /* AppDelegate.m */; };
 		DDD1CF1B1BD6D4F50016656E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD1CF1A1BD6D4F50016656E /* ViewController.m */; };
@@ -62,6 +65,11 @@
 		DD5B39A71BD778E200505BEA /* YouAreHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouAreHereController.h; sourceTree = "<group>"; };
 		DD5B39A81BD778E200505BEA /* YouAreHereController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouAreHereController.m; sourceTree = "<group>"; };
 		DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medical_heart_rate-512.png"; sourceTree = "<group>"; };
+		DDCFC8A41BE82FFC00D6FF51 /* HeartRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateViewController.h; sourceTree = SOURCE_ROOT; };
+		DDCFC8A51BE82FFC00D6FF51 /* HeartRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRateViewController.m; sourceTree = SOURCE_ROOT; };
+		DDCFC8A71BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2015-11-04 at 4.55.08 PM.png"; sourceTree = "<group>"; };
+		DDCFC8A91BEAB87100D6FF51 /* NoWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoWatchViewController.h; path = ../NoWatchViewController.h; sourceTree = "<group>"; };
+		DDCFC8AA1BEAB87100D6FF51 /* NoWatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoWatchViewController.m; path = ../NoWatchViewController.m; sourceTree = "<group>"; };
 		DDD1CF101BD6D4F50016656E /* PaceMkr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaceMkr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD1CF141BD6D4F50016656E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDD1CF161BD6D4F50016656E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 				DDD1CF191BD6D4F50016656E /* ViewController.h */,
 				DDD1CF1A1BD6D4F50016656E /* ViewController.m */,
 				DDD1CF1C1BD6D4F50016656E /* Main.storyboard */,
+				DDCFC8A71BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png */,
 				DDD1CF1F1BD6D4F50016656E /* Assets.xcassets */,
 				DDD1CF211BD6D4F50016656E /* LaunchScreen.storyboard */,
 				DDD1CF241BD6D4F50016656E /* Info.plist */,
@@ -160,6 +169,10 @@
 				DD5B39A81BD778E200505BEA /* YouAreHereController.m */,
 				7D2A54771BE16F590056D5E4 /* MapViewController.h */,
 				7D2A54781BE16F590056D5E4 /* MapViewController.m */,
+				DDCFC8A41BE82FFC00D6FF51 /* HeartRateViewController.h */,
+				DDCFC8A51BE82FFC00D6FF51 /* HeartRateViewController.m */,
+				DDCFC8A91BEAB87100D6FF51 /* NoWatchViewController.h */,
+				DDCFC8AA1BEAB87100D6FF51 /* NoWatchViewController.m */,
 			);
 			name = PaceMkr;
 			path = Milestone1;
@@ -319,6 +332,7 @@
 				DDD1CF1E1BD6D4F50016656E /* Main.storyboard in Resources */,
 				DDD1CF4D1BD6F10E0016656E /* earth-no-background.png in Resources */,
 				DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */,
+				DDCFC8A81BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +357,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCFC8AB1BEAB87100D6FF51 /* NoWatchViewController.m in Sources */,
 				DDD1CF1B1BD6D4F50016656E /* ViewController.m in Sources */,
 				DDD1CF181BD6D4F50016656E /* AppDelegate.m in Sources */,
 				7D2A54791BE16F590056D5E4 /* MapViewController.m in Sources */,
+				DDCFC8A61BE82FFC00D6FF51 /* HeartRateViewController.m in Sources */,
 				DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */,
 				DDD1CF151BD6D4F50016656E /* main.m in Sources */,
 			);

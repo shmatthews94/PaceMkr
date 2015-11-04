@@ -19,6 +19,7 @@
 
 extern NSString *NameID;
 extern NSString *THR;
+@import HealthKit;
 
 @implementation YouAreHereController
 @synthesize locationManager;
@@ -39,7 +40,10 @@ extern NSString *THR;
     [locationManager startMonitoringSignificantLocationChanges];
     [locationManager startUpdatingLocation];
     name.text = data;
+    
+    
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -77,6 +81,29 @@ extern NSString *THR;
 {
     NSLog(@"Cannot find the location.");
 }
+
+//healthKit code here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end
