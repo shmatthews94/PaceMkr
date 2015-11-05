@@ -16,7 +16,7 @@
 @synthesize HeartRate;
 @synthesize UpdateButton;
 @synthesize bpmBox;
-
+extern NSString *THR;
 
 
 - (void)viewDidLoad {
@@ -30,8 +30,21 @@
 }
 - (IBAction)updateBpm:(id)sender {
     NSString *bpm;
+    int targHR = [THR intValue];
     bpm = bpmBox.text;
-    HeartRate.text = bpm;
+    int rate = [bpmBox.text intValue];
+    HeartRate.text = [NSString stringWithFormat:@"%d", rate];
+    HeartRate.textColor = [UIColor blueColor];
+
+    if(rate > (targHR - 10) && rate < (targHR + 10)){
+        HeartRate.textColor = [UIColor greenColor];
+    } else if (rate > (targHR - 25) && rate < (targHR + 25)){
+        HeartRate.textColor = [UIColor yellowColor];
+    }else{
+        HeartRate.textColor = [UIColor redColor];
+    }
+    
+
 }
 
 
