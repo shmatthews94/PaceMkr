@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
 
 NSString *NameID;
 NSString *Age;
 NSString *THR;
 NSDecimalNumber *TotalDistance;
+CLLocation *Location1;
+CLLocation *Location2;
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

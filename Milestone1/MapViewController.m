@@ -20,7 +20,12 @@ extern NSDecimalNumber *TotalDistance;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Distance.text = [TotalDistance stringValue];
+    NSNumberFormatter * nf = [[NSNumberFormatter alloc] init];
+    [nf setMinimumIntegerDigits:1];
+    [nf setMinimumFractionDigits:2];
+    [nf setMaximumFractionDigits:2];
+    NSString *rounded  = [nf stringFromNumber:TotalDistance];
+    Distance.text = [NSString stringWithFormat:@"%@ mi", rounded];
     self.mapView.showsUserLocation = YES;
     // Do any additional setup after loading the view.
 }
@@ -45,6 +50,6 @@ extern NSDecimalNumber *TotalDistance;
     NSDecimalNumber *zero = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:0.0];
     TotalDistance = zero;
     
-    Distance.text = [NSString stringWithFormat:@"0.0 mi"];
+    Distance.text = [NSString stringWithFormat:@"0.00 mi"];
 }
 @end

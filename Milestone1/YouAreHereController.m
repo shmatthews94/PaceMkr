@@ -15,14 +15,16 @@
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
     CLPlacemark *placemark2;
-    CLLocation *Location1;
-    CLLocation *Location2;
+
 }
 @end
 
 extern NSString *NameID;
 extern NSString *THR;
 extern NSDecimalNumber *TotalDistance;
+extern CLLocation *Location1;
+extern CLLocation *Location2;
+
 @import HealthKit;
 
 @implementation YouAreHereController
@@ -73,9 +75,10 @@ extern NSDecimalNumber *TotalDistance;
             double diffmiles = distance/1609.34;
             double total = [TotalDistance doubleValue];
             double new = total + diffmiles;
+            double new2 = floorf(new * 100) / 100;
             NSLog(@"Total Distance is: %f", new);
             NSLog(@"lat is %f : lon is %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
-            NSDecimalNumber *finaltotal = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:new];
+            NSDecimalNumber *finaltotal = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:new2];
             TotalDistance = finaltotal;
             Location2 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
             latitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.latitude];
@@ -100,27 +103,4 @@ extern NSDecimalNumber *TotalDistance;
 }
 
 //healthKit code here
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end
