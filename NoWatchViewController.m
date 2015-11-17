@@ -16,6 +16,7 @@
 @synthesize HeartRate;
 @synthesize UpdateButton;
 @synthesize bpmBox;
+@synthesize ChangeRate;
 extern NSString *THR;
 
 
@@ -33,8 +34,10 @@ extern NSString *THR;
     int targHR = [THR intValue];
     bpm = bpmBox.text;
     int rate = [bpmBox.text intValue];
+    int diff = targHR - rate;
     HeartRate.text = [NSString stringWithFormat:@"%d", rate];
     HeartRate.textColor = [UIColor blueColor];
+    ChangeRate.textColor = [UIColor orangeColor];
 
     if(rate > (targHR - 10) && rate < (targHR + 10)){
         HeartRate.textColor = [UIColor greenColor];
@@ -44,6 +47,15 @@ extern NSString *THR;
         HeartRate.textColor = [UIColor redColor];
     }
     
+    if(diff == 0){
+        ChangeRate.text = [NSString stringWithFormat:@"Keep it up!"];
+        
+    }else if (diff > 0){
+        ChangeRate.text = [NSString stringWithFormat:@"Increase BPM by: %d", diff];
+    }else{
+        diff = (diff * -1);
+        ChangeRate.text = [NSString stringWithFormat:@"Decrease BPM by: %d", diff];
+    }
 
 }
 

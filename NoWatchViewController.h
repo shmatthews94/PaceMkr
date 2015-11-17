@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *HeartRate;
 @property (weak, nonatomic) IBOutlet UIButton *UpdateButton;
 @property (weak, nonatomic) IBOutlet UITextField *bpmBox;
-
+@property (weak, nonatomic) IBOutlet UILabel *ChangeRate;
 
 @end
