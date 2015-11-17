@@ -14,11 +14,15 @@
 {
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
+    CLPlacemark *placemark2;
+    CLLocation *Location1;
+    CLLocation *Location2;
 }
 @end
 
 extern NSString *NameID;
 extern NSString *THR;
+extern NSDecimalNumber *TotalDistance;
 @import HealthKit;
 
 @implementation YouAreHereController
@@ -63,10 +67,21 @@ extern NSString *THR;
         
         if (error == nil) {
             placemark = [placemarks lastObject];
+            
+            Location1 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+            CLLocationDistance distance = [Location1 distanceFromLocation:Location2];
+            double diffmiles = distance/1609.34;
+            double total = [TotalDistance doubleValue];
+            double new = total + diffmiles;
+            NSDecimalNumber *finaltotal = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:new];
+            TotalDistance = finaltotal;
+            Location2 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
             latitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.latitude];
             longitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.longitude];
             name.text = NameID;
             targetheartrate.text = THR;
+            placemark2 = [placemarks lastObject];
+            
             NSLog(@"lat is %f : lon is %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
             
         } else {

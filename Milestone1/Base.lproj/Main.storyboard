@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -951,7 +951,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W9G-zZ-0w9">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="484"/>
                                 <animations/>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpK-PD-Tfu">
@@ -968,20 +968,56 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0E-KE-R6n">
+                                <rect key="frame" x="281" y="550" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="Reset:" destination="AVH-9x-7FC" eventType="touchUpInside" id="sU9-Lj-h2F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6N-YW-giT">
+                                <rect key="frame" x="284" y="521" width="33" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4lE-hX-75J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Traveled:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-RT-5uu">
+                                <rect key="frame" x="229" y="492" width="142" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hnk-wl-TU7"/>
+                                    <constraint firstAttribute="width" constant="142" id="vXA-79-H2L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WpK-PD-Tfu" firstAttribute="top" secondItem="dxf-E2-uRm" secondAttribute="top" id="K5c-Cg-jua"/>
-                            <constraint firstItem="W9G-zZ-0w9" firstAttribute="leading" secondItem="dxf-E2-uRm" secondAttribute="leading" id="ZLs-62-2bF"/>
-                            <constraint firstItem="W9G-zZ-0w9" firstAttribute="bottom" secondItem="u49-fx-iNv" secondAttribute="top" id="c1w-fS-9pM"/>
-                            <constraint firstItem="WpK-PD-Tfu" firstAttribute="trailing" secondItem="W9G-zZ-0w9" secondAttribute="trailing" id="fgQ-Pj-sbf"/>
-                            <constraint firstItem="WpK-PD-Tfu" firstAttribute="leading" secondItem="W9G-zZ-0w9" secondAttribute="leading" id="hlq-U0-iNi"/>
-                            <constraint firstAttribute="trailing" secondItem="WpK-PD-Tfu" secondAttribute="trailing" id="kW9-Xu-UDT"/>
-                            <constraint firstItem="WpK-PD-Tfu" firstAttribute="top" secondItem="W9G-zZ-0w9" secondAttribute="top" id="ywX-LO-Bfd"/>
+                            <constraint firstItem="W9G-zZ-0w9" firstAttribute="leading" secondItem="WpK-PD-Tfu" secondAttribute="leading" id="1K5-uD-YDb"/>
+                            <constraint firstItem="N0E-KE-R6n" firstAttribute="top" secondItem="U6N-YW-giT" secondAttribute="bottom" constant="8" symbolic="YES" id="E5q-8K-V6o"/>
+                            <constraint firstItem="W9G-zZ-0w9" firstAttribute="leading" secondItem="dxf-E2-uRm" secondAttribute="leading" id="FTU-LK-UEh"/>
+                            <constraint firstItem="7ha-RT-5uu" firstAttribute="top" secondItem="W9G-zZ-0w9" secondAttribute="bottom" constant="8" symbolic="YES" id="IWl-2j-HJA"/>
+                            <constraint firstItem="WpK-PD-Tfu" firstAttribute="top" secondItem="W9G-zZ-0w9" secondAttribute="top" id="KYT-Af-cgs"/>
+                            <constraint firstItem="U6N-YW-giT" firstAttribute="centerX" secondItem="N0E-KE-R6n" secondAttribute="centerX" id="MhL-5x-uL8"/>
+                            <constraint firstAttribute="bottom" secondItem="N0E-KE-R6n" secondAttribute="bottom" constant="20" symbolic="YES" id="QYs-e4-d32"/>
+                            <constraint firstItem="U6N-YW-giT" firstAttribute="top" secondItem="7ha-RT-5uu" secondAttribute="bottom" constant="8" symbolic="YES" id="WwN-GS-8wQ"/>
+                            <constraint firstItem="W9G-zZ-0w9" firstAttribute="trailing" secondItem="WpK-PD-Tfu" secondAttribute="trailing" id="Z3h-vT-Eiw"/>
+                            <constraint firstAttribute="trailing" secondItem="WpK-PD-Tfu" secondAttribute="trailing" id="ZsO-la-2yH"/>
+                            <constraint firstItem="WpK-PD-Tfu" firstAttribute="centerX" secondItem="7ha-RT-5uu" secondAttribute="centerX" id="bxT-Yo-HLT"/>
+                            <constraint firstItem="W9G-zZ-0w9" firstAttribute="top" secondItem="dxf-E2-uRm" secondAttribute="top" id="gqb-7a-Jjl"/>
+                            <constraint firstItem="U6N-YW-giT" firstAttribute="centerX" secondItem="7ha-RT-5uu" secondAttribute="centerX" id="k4N-8k-hRo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Distance" destination="U6N-YW-giT" id="2fj-NO-aAU"/>
                         <outlet property="mapView" destination="W9G-zZ-0w9" id="XLk-qK-N3R"/>
                     </connections>
                 </viewController>
@@ -1202,6 +1238,8 @@
                                 <exclude reference="VKX-Xs-zSc"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="JNU-e7-tjl"/>
+                                <exclude reference="JpG-V6-S1W"/>
                                 <exclude reference="CXT-Dk-uXm"/>
                                 <exclude reference="Pq1-kY-i3z"/>
                                 <exclude reference="XoE-lt-oNA"/>
@@ -1211,8 +1249,6 @@
                                 <exclude reference="OPv-oa-eA4"/>
                                 <exclude reference="hd1-wF-vPN"/>
                                 <exclude reference="ySG-rm-Ad5"/>
-                                <exclude reference="JNU-e7-tjl"/>
-                                <exclude reference="JpG-V6-S1W"/>
                                 <exclude reference="BPN-LC-OUt"/>
                                 <exclude reference="OG1-a5-CEV"/>
                                 <exclude reference="SOl-xn-FcX"/>
@@ -1231,6 +1267,8 @@
                                 <include reference="VKX-Xs-zSc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="JNU-e7-tjl"/>
+                                <include reference="JpG-V6-S1W"/>
                                 <exclude reference="0lV-K0-iQI"/>
                                 <include reference="Pq1-kY-i3z"/>
                                 <exclude reference="e27-pZ-5rg"/>
@@ -1240,8 +1278,6 @@
                                 <exclude reference="Ujp-sJ-RFK"/>
                                 <exclude reference="qKL-5g-RvX"/>
                                 <include reference="ySG-rm-Ad5"/>
-                                <include reference="JNU-e7-tjl"/>
-                                <include reference="JpG-V6-S1W"/>
                                 <include reference="BPN-LC-OUt"/>
                                 <include reference="SOl-xn-FcX"/>
                                 <exclude reference="SgK-Bi-8lk"/>
@@ -1296,6 +1332,6 @@
         <image name="Medical_heart_rate-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Qn-Um-NSr"/>
+        <segue reference="Brg-6y-tEk"/>
     </inferredMetricsTieBreakers>
 </document>

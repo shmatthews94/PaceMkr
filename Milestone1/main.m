@@ -12,6 +12,7 @@
 NSString *NameID;
 NSString *Age;
 NSString *THR;
+NSDecimalNumber *TotalDistance;
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

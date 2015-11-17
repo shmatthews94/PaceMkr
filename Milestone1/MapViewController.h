@@ -12,5 +12,7 @@
 @interface MapViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *Distance;
+- (IBAction)Reset:(id)sender;
 
 @end

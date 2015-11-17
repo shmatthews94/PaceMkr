@@ -10,12 +10,17 @@
 
 @interface MapViewController ()
 
+
 @end
 
+extern NSDecimalNumber *TotalDistance;
+
 @implementation MapViewController
+@synthesize Distance;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Distance.text = [TotalDistance stringValue];
     self.mapView.showsUserLocation = YES;
     // Do any additional setup after loading the view.
 }
@@ -35,4 +40,11 @@
 }
 */
 
+- (IBAction)Reset:(id)sender {
+    
+    NSDecimalNumber *zero = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:0.0];
+    TotalDistance = zero;
+    
+    Distance.text = [NSString stringWithFormat:@"0.0 mi"];
+}
 @end
