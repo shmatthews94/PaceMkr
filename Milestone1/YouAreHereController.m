@@ -69,10 +69,12 @@ extern NSDecimalNumber *TotalDistance;
             placemark = [placemarks lastObject];
             
             Location1 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
-            CLLocationDistance distance = [Location1 distanceFromLocation:Location2];
+            CLLocationDistance distance = [Location2 distanceFromLocation:Location1];
             double diffmiles = distance/1609.34;
             double total = [TotalDistance doubleValue];
             double new = total + diffmiles;
+            NSLog(@"Total Distance is: %f", new);
+            NSLog(@"lat is %f : lon is %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
             NSDecimalNumber *finaltotal = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:new];
             TotalDistance = finaltotal;
             Location2 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
