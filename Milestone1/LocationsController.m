@@ -17,7 +17,7 @@
 - (IBAction)fetchGreeting;
 {
     NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:@"http://rest-service.guides.spring.io/greeting"]
+    [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json?token=AEYL7cAh2dvgSs_dnSRBEUgVUd1_kTLoks5WW_yrwA%3D%3D"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
@@ -26,8 +26,12 @@
                     NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data
                                                                              options:0
                                                                                error:NULL];
+                    for(id key in greeting) {
+                        self.greetingContent.text = [self.greetingContent.text stringByAppendingString:[greeting objectForKey:key]];
+                        
+                    }
                     self.greetingId.text = [[greeting objectForKey:@"id"] stringValue];
-                    self.greetingContent.text = [greeting objectForKey:@"content"];
+                    //self.greetingContent.text = [greeting objectForKey:@"content"];
                 }
                 // handle response
                 
