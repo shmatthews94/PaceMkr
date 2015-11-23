@@ -35,7 +35,7 @@
                     self.locationlist = greeting;
                     //self.locations = [greeting allKeys];
                     for(NSDictionary * dataDict in greeting) {
-                        self.greetingContent.text = [self.greetingContent.text stringByAppendingString:[[dataDict objectForKey:@"id"] stringValue]];
+                        self.greetingContent.text = [self.greetingContent.text stringByAppendingString:[[dataDict objectForKey:@"building_name"] stringValue]];
                         
                     }
                     // self.greetingId.text = [[greeting objectForKey:@"id"] stringValue];
@@ -91,13 +91,12 @@
      */
     
     NSDictionary *item = self.locations[(NSUInteger)indexPath.row];
-    NSString *name = [item objectForKey:@"name"];
-    NSString *lat = [item objectForKey:@"lat"];
-    NSString *lon = [item objectForKey:@"lon"];
+    NSString *name = [item objectForKey:@"building_name"];
+    NSString *lat = [item objectForKey:@"x_coordinate"];
+    NSString *lon = [item objectForKey:@"y_coordinate"];
     
-    cell.latlabel.text = @"Poop";
-    cell.namelabel.text = [NSString stringWithFormat:@"%@", name];
     cell.latlabel.text = [NSString stringWithFormat:@"%@", lat];
+    cell.namelabel.text = [NSString stringWithFormat:@"%@", name];
     cell.distancelabel.text = [NSString stringWithFormat:@"%@", lon];
     /*
     cell.addresslabel.text = [item objectForKey:@"Address"];
