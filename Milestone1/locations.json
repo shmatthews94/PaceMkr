@@ -1,1 +1,4 @@
-[{"id":3431,"content":"Hello, World!"}, {"id":5150,"content":"Hello, Ladies!"}, {"id":69,"content":"Hello, Ladies!"}, {"id":420,"content":"Hello, Ladies!"}]
+[{"id":3431,"name":"Alderman Library","lat":38.036339,"lon":-78.505897},
+ {"id":3431,"name":"Amphitheater","lat":38.0335431,"lon":-78.5062061},
+ {"id":3431,"name":"AFC","lat":38.03284547,"lon":-78.51414408},
+ {"id":3431,"name":"Astronomy Building","lat":38.035467,"lon":-78.514922}]

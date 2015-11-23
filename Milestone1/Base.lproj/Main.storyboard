@@ -36,7 +36,7 @@
                                 <rect key="frame" x="279" y="152" width="42" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="0h1-C9-GoP"/>
+                                    <constraint firstAttribute="height" constant="21" id="yjI-n8-5ss"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -46,7 +46,7 @@
                                 <rect key="frame" x="279" y="181" width="42" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="tf6-EU-awa"/>
+                                    <constraint firstAttribute="height" constant="21" id="xK4-X0-0W0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -60,10 +60,13 @@
                                     <action selector="fetchGreeting" destination="rEH-Zu-XZY" eventType="touchUpInside" id="Pea-3H-Dpp"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5jU-kc-RSl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5jU-kc-RSl">
                                 <rect key="frame" x="0.0" y="248" width="600" height="352"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="352" id="yKQ-WZ-0BU"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="106" id="gVX-W6-PYZ" customClass="LocationsTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="106"/>
@@ -129,15 +132,18 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BFY-mt-8cR" firstAttribute="leading" secondItem="Aic-jf-sd0" secondAttribute="leading" id="0f0-gX-ogR"/>
-                            <constraint firstItem="DMv-hk-PaD" firstAttribute="centerX" secondItem="X6d-ZR-sDz" secondAttribute="centerX" id="2OE-Zj-E7b"/>
-                            <constraint firstAttribute="trailing" secondItem="BFY-mt-8cR" secondAttribute="trailing" id="34u-XZ-trz"/>
-                            <constraint firstItem="DMv-hk-PaD" firstAttribute="top" secondItem="X6d-ZR-sDz" secondAttribute="bottom" constant="8" symbolic="YES" id="aRY-ce-Zix"/>
-                            <constraint firstItem="X6d-ZR-sDz" firstAttribute="top" secondItem="Uev-RD-ARC" secondAttribute="bottom" constant="8" symbolic="YES" id="bRw-5G-0tE"/>
-                            <constraint firstItem="Uev-RD-ARC" firstAttribute="leading" secondItem="X6d-ZR-sDz" secondAttribute="leading" id="dtZ-aT-4kd"/>
-                            <constraint firstItem="BFY-mt-8cR" firstAttribute="centerX" secondItem="Uev-RD-ARC" secondAttribute="centerX" id="tVf-hn-iir"/>
-                            <constraint firstItem="BFY-mt-8cR" firstAttribute="top" secondItem="Aic-jf-sd0" secondAttribute="top" id="tYh-wV-nHp"/>
-                            <constraint firstItem="BaW-TS-5Tw" firstAttribute="top" secondItem="DMv-hk-PaD" secondAttribute="bottom" constant="360" id="zIA-Rx-bmv"/>
+                            <constraint firstItem="Uev-RD-ARC" firstAttribute="centerX" secondItem="BFY-mt-8cR" secondAttribute="centerX" id="5oh-F0-nYe"/>
+                            <constraint firstItem="DMv-hk-PaD" firstAttribute="centerX" secondItem="X6d-ZR-sDz" secondAttribute="centerX" id="Fh8-M6-lKv"/>
+                            <constraint firstAttribute="trailing" secondItem="BFY-mt-8cR" secondAttribute="trailing" id="KFa-4K-s7s"/>
+                            <constraint firstItem="Uev-RD-ARC" firstAttribute="leading" secondItem="X6d-ZR-sDz" secondAttribute="leading" id="Rxt-ia-yw2"/>
+                            <constraint firstItem="5jU-kc-RSl" firstAttribute="top" secondItem="DMv-hk-PaD" secondAttribute="bottom" constant="8" symbolic="YES" id="SBw-1X-JYW"/>
+                            <constraint firstItem="X6d-ZR-sDz" firstAttribute="top" secondItem="Uev-RD-ARC" secondAttribute="bottom" constant="8" symbolic="YES" id="gUA-9O-Qtx"/>
+                            <constraint firstItem="5jU-kc-RSl" firstAttribute="leading" secondItem="Aic-jf-sd0" secondAttribute="leading" id="gdZ-RQ-XvI"/>
+                            <constraint firstItem="BFY-mt-8cR" firstAttribute="top" secondItem="Aic-jf-sd0" secondAttribute="top" id="n6L-C7-45d"/>
+                            <constraint firstItem="BFY-mt-8cR" firstAttribute="leading" secondItem="5jU-kc-RSl" secondAttribute="leading" id="p6r-wT-qh5"/>
+                            <constraint firstItem="5jU-kc-RSl" firstAttribute="bottom" secondItem="BaW-TS-5Tw" secondAttribute="top" id="trI-W7-NEX"/>
+                            <constraint firstItem="DMv-hk-PaD" firstAttribute="top" secondItem="X6d-ZR-sDz" secondAttribute="bottom" constant="8" symbolic="YES" id="v4W-Jm-nIA"/>
+                            <constraint firstItem="5jU-kc-RSl" firstAttribute="trailing" secondItem="BFY-mt-8cR" secondAttribute="trailing" id="vWX-bw-27f"/>
                         </constraints>
                     </view>
                     <connections>

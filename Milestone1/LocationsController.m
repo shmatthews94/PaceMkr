@@ -20,7 +20,7 @@
 - (IBAction)fetchGreeting;
 {
     NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json?token=AEYL7cAh2dvgSs_dnSRBEUgVUd1_kTLoks5WW_yrwA%3D%3D"]
+    [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
@@ -91,9 +91,14 @@
      */
     
     NSDictionary *item = self.locations[(NSUInteger)indexPath.row];
-    NSString *foo = [[self.locations objectAtIndex:(NSUInteger)indexPath.row] objectForKey:@"id"];
+    NSString *name = [item objectForKey:@"name"];
+    NSString *lat = [item objectForKey:@"lat"];
+    NSString *lon = [item objectForKey:@"lon"];
     
     cell.latlabel.text = @"Poop";
+    cell.namelabel.text = [NSString stringWithFormat:@"%@", name];
+    cell.latlabel.text = [NSString stringWithFormat:@"%@", lat];
+    cell.distancelabel.text = [NSString stringWithFormat:@"%@", lon];
     /*
     cell.addresslabel.text = [item objectForKey:@"Address"];
     cell.citylabel.text = [item objectForKey:@"City"];
