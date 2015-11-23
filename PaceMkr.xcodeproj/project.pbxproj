@@ -17,6 +17,8 @@
 		7D83696C1C02F950009FA5D5 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D83696B1C02F950009FA5D5 /* locations.json */; };
 		7D83696F1C030064009FA5D5 /* LocationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D83696E1C030064009FA5D5 /* LocationsTableViewCell.m */; };
 		7DC223FB1C03A6DA00ACAC4D /* locations2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DC223FA1C03A6DA00ACAC4D /* locations2.json */; };
+		7DC223FD1C03AFB100ACAC4D /* maps1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC223FC1C03AFB100ACAC4D /* maps1.png */; };
+		7DC223FF1C03B0B400ACAC4D /* locations3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DC223FE1C03B0B400ACAC4D /* locations3.json */; };
 		DD26F4A71BE7D65F0035E8C8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */; };
 		DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B39A81BD778E200505BEA /* YouAreHereController.m */; };
 		DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */; };
@@ -70,6 +72,8 @@
 		7D83696D1C030064009FA5D5 /* LocationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewCell.h; sourceTree = "<group>"; };
 		7D83696E1C030064009FA5D5 /* LocationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewCell.m; sourceTree = "<group>"; };
 		7DC223FA1C03A6DA00ACAC4D /* locations2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations2.json; sourceTree = "<group>"; };
+		7DC223FC1C03AFB100ACAC4D /* maps1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maps1.png; path = ../../../Documents/199DryClean/199DryClean/maps1.png; sourceTree = "<group>"; };
+		7DC223FE1C03B0B400ACAC4D /* locations3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations3.json; sourceTree = "<group>"; };
 		DD26F4A51BE7D65F0035E8C8 /* PaceMkr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PaceMkr.entitlements; sourceTree = SOURCE_ROOT; };
 		DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		DD5B39A71BD778E200505BEA /* YouAreHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouAreHereController.h; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				7D8369691C02F2A7009FA5D5 /* LocationsController.m */,
 				7D83696B1C02F950009FA5D5 /* locations.json */,
 				7DC223FA1C03A6DA00ACAC4D /* locations2.json */,
+				7DC223FE1C03B0B400ACAC4D /* locations3.json */,
 				7D83696D1C030064009FA5D5 /* LocationsTableViewCell.h */,
 				7D83696E1C030064009FA5D5 /* LocationsTableViewCell.m */,
 			);
@@ -197,6 +202,7 @@
 		DDD1CF131BD6D4F50016656E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7DC223FC1C03AFB100ACAC4D /* maps1.png */,
 				DDD1CF501BD6F3360016656E /* mapPinIcon.png */,
 				DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */,
 				DDD1CF4E1BD6F20C0016656E /* space-bg.jpg */,
@@ -350,6 +356,8 @@
 				7DC223FB1C03A6DA00ACAC4D /* locations2.json in Resources */,
 				DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */,
 				7D83696C1C02F950009FA5D5 /* locations.json in Resources */,
+				7DC223FD1C03AFB100ACAC4D /* maps1.png in Resources */,
+				7DC223FF1C03B0B400ACAC4D /* locations3.json in Resources */,
 				DDCFC8A81BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

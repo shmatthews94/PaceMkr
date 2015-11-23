@@ -6,6 +6,7 @@
 //  Copyright © 2015 Chane Meets. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 #import "LocationsController.h"
 #import "LocationsTableViewCell.h"
 
@@ -23,7 +24,7 @@ extern CLLocation *Location1;
 {
     NSLog(@"Fetching...");
     NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json"]
+    [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations2.json"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
@@ -94,17 +95,15 @@ extern CLLocation *Location1;
     
     NSDictionary *item = self.locations[(NSUInteger)indexPath.row];
     NSString *name = [item objectForKey:@"building_name"];
-    NSString *lat = [item objectForKey:@"x_coordinate"];
-    NSString *lon = [item objectForKey:@"y_coordinate"];
     
-    cell.latlabel.text = [NSString stringWithFormat:@"%@", lat];
     cell.namelabel.text = [NSString stringWithFormat:@"%@", name];
     //cell.distancelabel.text = [NSString stringWithFormat:@"%@", lon];
     CLLocation *point = [[CLLocation alloc] initWithLatitude:[[item objectForKey:@"x_coordinate"] doubleValue]
                                                    longitude:[[item objectForKey:@"y_coordinate"] doubleValue]];
     CLLocationDistance distance = [point distanceFromLocation:Location1]/1609.34;
-    cell.distancelabel.text = [NSString stringWithFormat:@"%.1f mi", distance];
+    cell.distancelabel.text = [NSString stringWithFormat:@"%.1f mi away", distance];
     NSLog(@"distance is %.1f",distance);
+    [cell.map addTarget:self action:@selector(mapclicked:) forControlEvents:UIControlEventTouchUpInside];
     /*
     cell.addresslabel.text = [item objectForKey:@"Address"];
     cell.citylabel.text = [item objectForKey:@"City"];
@@ -165,6 +164,14 @@ extern CLLocation *Location1;
     //cell.imageView.image = [UIImage imageNamed:@"creme_brelee.jpg"];
     
     return cell;
+}
+
+-(IBAction)mapclicked:(UIButton*)sender {
+    NSDictionary *item = self.locations[(NSUInteger)sender.tag];
+    MKPlacemark *location = [[MKPlacemark alloc]initWithCoordinate:(CLLocationCoordinate2DMake([[item objectForKey:@"Latitude"] doubleValue], [[item objectForKey:@"Longitude"] doubleValue])) addressDictionary:nil];
+    MKMapItem *store =[[MKMapItem alloc]initWithPlacemark:location];
+    
+    [store openInMapsWithLaunchOptions:nil];
 }
 
 

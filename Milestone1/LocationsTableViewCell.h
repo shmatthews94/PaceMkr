@@ -12,5 +12,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *namelabel;
 @property (nonatomic, weak) IBOutlet UILabel *latlabel;
 @property (nonatomic, weak) IBOutlet UILabel *distancelabel;
+@property (nonatomic, weak) IBOutlet UIButton *map;
 
 @end

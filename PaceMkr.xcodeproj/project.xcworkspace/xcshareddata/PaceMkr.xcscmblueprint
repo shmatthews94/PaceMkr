@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BD0700FF7A95B88E75AB952D45D36608C4344551",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BD0700FF7A95B88E75AB952D45D36608C4344551" : 0,
+    "6E4B26946BAE3F7B5206F5BE93624A058D2B48BB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6C939965-8A36-41BD-905D-92608AAD2A97",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BD0700FF7A95B88E75AB952D45D36608C4344551" : "PaceMkr\/",
+    "6E4B26946BAE3F7B5206F5BE93624A058D2B48BB" : "..\/Documents\/199DryClean"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PaceMkr",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PaceMkr.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shmatthews94\/199DryClean.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6E4B26946BAE3F7B5206F5BE93624A058D2B48BB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shmatthews94\/PaceMkr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD0700FF7A95B88E75AB952D45D36608C4344551"
+    }
+  ]
+}
