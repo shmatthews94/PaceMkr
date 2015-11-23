@@ -11,7 +11,7 @@
 #import "LocationsTableViewCell.h"
 
 @interface LocationsController ()
-@property (nonatomic, strong) NSArray *locations;
+@property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) NSDictionary *locationlist;
 @property bool found;
 @end
@@ -20,30 +20,35 @@ extern CLLocation *Location1;
 
 @implementation LocationsController
 
-- (IBAction)fetchGreeting;
+- (void)fetchGreeting;
 {
     NSLog(@"Fetching...");
     NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations2.json"]
+    // http://myjson.com/4h9hd
+    // https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json
+    [[session dataTaskWithURL:[NSURL URLWithString:@"https://api.myjson.com/bins/4oz9d"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
-                if (data.length > 0)
-                {
-                    NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data
-                                                                             options:0
-                                                                               error:NULL];
+                //NSLog(@"Success, data length is %i", data.length);
+
+                    NSError *jsonError = nil;
                     self.locations = [NSJSONSerialization JSONObjectWithData:data
                                                                      options:0
-                                                                       error:NULL];
-                    self.locationlist = greeting;
+                                                                       error:&jsonError];
+                if(jsonError) {
+                    NSLog(@"WHAT THE FUCK");
+                }
+                else {
+                    NSLog(@"Success, locations length is %i", self.locations.count);
+                    [self.locationtable reloadData];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.locationtable reloadData];
+                    });
+                }
                     //self.locations = [greeting allKeys];
                     // self.greetingId.text = [[greeting objectForKey:@"id"] stringValue];
                     //self.greetingContent.text = [greeting objectForKey:@"content"];
-                }
-                else if(error) {
-                    NSLog(@"Error reading JSON!");
-                }
                 // handle response
                 
             }] resume];
@@ -52,6 +57,7 @@ extern CLLocation *Location1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.locations = [[NSMutableArray alloc] init];
     [self fetchGreeting];
 }
 
@@ -79,7 +85,7 @@ extern CLLocation *Location1;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.locationlist count];
+    return [self.locations count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -168,7 +174,7 @@ extern CLLocation *Location1;
 
 -(IBAction)mapclicked:(UIButton*)sender {
     NSDictionary *item = self.locations[(NSUInteger)sender.tag];
-    MKPlacemark *location = [[MKPlacemark alloc]initWithCoordinate:(CLLocationCoordinate2DMake([[item objectForKey:@"Latitude"] doubleValue], [[item objectForKey:@"Longitude"] doubleValue])) addressDictionary:nil];
+    MKPlacemark *location = [[MKPlacemark alloc]initWithCoordinate:(CLLocationCoordinate2DMake([[item objectForKey:@"x_coordinate"] doubleValue], [[item objectForKey:@"y_coordinate"] doubleValue])) addressDictionary:nil];
     MKMapItem *store =[[MKMapItem alloc]initWithPlacemark:location];
     
     [store openInMapsWithLaunchOptions:nil];

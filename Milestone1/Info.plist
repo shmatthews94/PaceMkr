@@ -56,6 +56,17 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>myjson.com/4h9hd</key>
+			<dict/>
+			<key>myjson.com</key>
+			<dict>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 			<key>amazonaws.com</key>
 			<dict>
 				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
