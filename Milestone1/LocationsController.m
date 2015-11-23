@@ -15,16 +15,19 @@
 @property bool found;
 @end
 
+extern CLLocation *Location1;
+
 @implementation LocationsController
 
 - (IBAction)fetchGreeting;
 {
+    NSLog(@"Fetching...");
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
-                if (data.length > 0 && error == nil)
+                if (data.length > 0)
                 {
                     NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data
                                                                              options:0
@@ -36,6 +39,9 @@
                     //self.locations = [greeting allKeys];
                     // self.greetingId.text = [[greeting objectForKey:@"id"] stringValue];
                     //self.greetingContent.text = [greeting objectForKey:@"content"];
+                }
+                else if(error) {
+                    NSLog(@"Error reading JSON!");
                 }
                 // handle response
                 
@@ -93,7 +99,12 @@
     
     cell.latlabel.text = [NSString stringWithFormat:@"%@", lat];
     cell.namelabel.text = [NSString stringWithFormat:@"%@", name];
-    cell.distancelabel.text = [NSString stringWithFormat:@"%@", lon];
+    //cell.distancelabel.text = [NSString stringWithFormat:@"%@", lon];
+    CLLocation *point = [[CLLocation alloc] initWithLatitude:[[item objectForKey:@"x_coordinate"] doubleValue]
+                                                   longitude:[[item objectForKey:@"y_coordinate"] doubleValue]];
+    CLLocationDistance distance = [point distanceFromLocation:Location1]/1609.34;
+    cell.distancelabel.text = [NSString stringWithFormat:@"%.1f mi", distance];
+    NSLog(@"distance is %.1f",distance);
     /*
     cell.addresslabel.text = [item objectForKey:@"Address"];
     cell.citylabel.text = [item objectForKey:@"City"];
