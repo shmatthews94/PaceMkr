@@ -34,10 +34,6 @@
                                                                        error:NULL];
                     self.locationlist = greeting;
                     //self.locations = [greeting allKeys];
-                    for(NSDictionary * dataDict in greeting) {
-                        self.greetingContent.text = [self.greetingContent.text stringByAppendingString:[[dataDict objectForKey:@"building_name"] stringValue]];
-                        
-                    }
                     // self.greetingId.text = [[greeting objectForKey:@"id"] stringValue];
                     //self.greetingContent.text = [greeting objectForKey:@"content"];
                 }

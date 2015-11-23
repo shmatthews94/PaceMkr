@@ -1,0 +1,317 @@
+ [
+  {
+  "building_name": "Alderman Library",
+  "x_coordinate": "38.036339",
+  "y_coordinate": "-78.505897"
+  },
+  {
+  "building_name": "Amphitheater",
+  "x_coordinate": "38.0335431",
+  "y_coordinate": "-78.5062061"
+  },
+  {
+  "building_name": "Aquatic Fitness Center",
+  "x_coordinate": "38.03284547",
+  "y_coordinate": "-78.51414408"
+  },
+  {
+  "building_name": "Astronomy Building",
+  "x_coordinate": "38.035467",
+  "y_coordinate": "-78.514922"
+  },
+  {
+  "building_name": "Booker House",
+  "x_coordinate": "38.036489",
+  "y_coordinate": "-78.502174"
+  },
+  {
+  "building_name": "Bookstore",
+  "x_coordinate": "38.03677",
+  "y_coordinate": "-78.50757"
+  },
+  {
+  "building_name": "Brooks Hall",
+  "x_coordinate": "38.0357972",
+  "y_coordinate": "-78.50224155"
+  },
+  {
+  "building_name": "Brown Residential College",
+  "x_coordinate": "38.03395",
+  "y_coordinate": "-78.5084"
+  },
+  {
+  "building_name": "Bryan Hall",
+  "x_coordinate": "38.033306",
+  "y_coordinate": "-78.505903"
+  },
+  {
+  "building_name": "Bryant Hall",
+  "x_coordinate": "38.03032",
+  "y_coordinate": "-78.51331"
+  },
+  {
+  "building_name": "Cabell",
+  "x_coordinate": "38.03313",
+  "y_coordinate": "-78.50531"
+  },
+  {
+  "building_name": "Campbell Hall",
+  "x_coordinate": "38.038691",
+  "y_coordinate": "-78.503714"
+  },
+  {
+  "building_name": "Cauthen House",
+  "x_coordinate": "38.03341",
+  "y_coordinate": "-78.516334"
+  },
+  {
+  "building_name": "Chapel",
+  "x_coordinate": "38.036268",
+  "y_coordinate": "-78.50448668"
+  },
+  {
+  "building_name": "Chemical Engineering Building",
+  "x_coordinate": "38.03338",
+  "y_coordinate": "-78.51062425"
+  },
+  {
+  "building_name": "Chemistry Bldg",
+  "x_coordinate": "38.03379",
+  "y_coordinate": "-78.511611"
+  },
+  {
+  "building_name": "Clark Hall",
+  "x_coordinate": "38.03282",
+  "y_coordinate": "-78.50836"
+  },
+  {
+  "building_name": "Clemons Library",
+  "x_coordinate": "38.036009",
+  "y_coordinate": "-78.506022"
+  },
+  {
+  "building_name": "Cobb Hall",
+  "x_coordinate": "38.032615",
+  "y_coordinate": "-78.502743"
+  },
+  {
+  "building_name": "Cocke Hall",
+  "x_coordinate": "38.033177",
+  "y_coordinate": "-78.505278"
+  },
+  {
+  "building_name": "Dell 1",
+  "x_coordinate": "38.034846",
+  "y_coordinate": "-78.510012"
+  },
+  {
+  "building_name": "Dell 2",
+  "x_coordinate": "38.035032",
+  "y_coordinate": "-78.509932"
+  },
+  {
+  "building_name": "Emmet/Ivy Garage",
+  "x_coordinate": "38.04129362",
+  "y_coordinate": "-78.50699723"
+  },
+  {
+  "building_name": "Fayerweather Hall",
+  "x_coordinate": "38.037766",
+  "y_coordinate": "-78.503097"
+  },
+  {
+  "building_name": "Garrett Hall",
+  "x_coordinate": "38.034115",
+  "y_coordinate": "-78.505495"
+  },
+  {
+  "building_name": "Gibson Hall",
+  "x_coordinate": "38.031417",
+  "y_coordinate": "-78.50516"
+  },
+  {
+  "building_name": "Gilmer Hall",
+  "x_coordinate": "38.034276",
+  "y_coordinate": "-78.513005"
+  },
+  {
+  "building_name": "Halsey Hall",
+  "x_coordinate": "38.0329",
+  "y_coordinate": "-78.50685"
+  },
+  {
+  "building_name": "John Paul Johns Arena",
+  "x_coordinate": "38.04575",
+  "y_coordinate": "-78.50767"
+  },
+  {
+  "building_name": "Kerchof Hall",
+  "x_coordinate": "38.032387",
+  "y_coordinate": "-78.508193"
+  },
+  {
+  "building_name": "Maury Hall",
+  "x_coordinate": "38.033408",
+  "y_coordinate": "-78.50678"
+  },
+  {
+  "building_name": "McLeod Hall",
+  "x_coordinate": "38.03102",
+  "y_coordinate": "-78.501609"
+  },
+  {
+  "building_name": "Mechanical Engr Bldg",
+  "x_coordinate": "38.032578",
+  "y_coordinate": "-78.511155"
+  },
+  {
+  "building_name": "Memorial Gymnasium",
+  "x_coordinate": "38.03782042",
+  "y_coordinate": "-78.5067605"
+  },
+  {
+  "building_name": "Minor Hall",
+  "x_coordinate": "38.033887",
+  "y_coordinate": "-78.506493"
+  },
+  {
+  "building_name": "Monroe Hall",
+  "x_coordinate": "38.034548",
+  "y_coordinate": "-78.506016"
+  },
+  {
+  "building_name": "Nau Hall",
+  "x_coordinate": "38.031761",
+  "y_coordinate": "-78.504982"
+  },
+  {
+  "building_name": "New Cabell Hall",
+  "x_coordinate": "38.032539",
+  "y_coordinate": "-78.505066"
+  },
+  {
+  "building_name": "Newcomb",
+  "x_coordinate": "38.03627",
+  "y_coordinate": "-78.506753"
+  },
+  {
+  "building_name": "Observatory Hill Dining Hall",
+  "x_coordinate": "38.0349233",
+  "y_coordinate": "-78.5147533"
+  },
+  {
+  "building_name": "Office of African American Affairs",
+  "x_coordinate": "38.03294055",
+  "y_coordinate": "-78.5062437"
+  },
+  {
+  "building_name": "Old Cabell Hall",
+  "x_coordinate": "38.032939",
+  "y_coordinate": "-78.504814"
+  },
+  {
+  "building_name": "Olsson Hall",
+  "x_coordinate": "38.032079",
+  "y_coordinate": "-78.510755"
+  },
+  {
+  "building_name": "Peabody",
+  "x_coordinate": "38.0354417",
+  "y_coordinate": "-78.5063986"
+  },
+  {
+  "building_name": "Physics",
+  "x_coordinate": "38.034915",
+  "y_coordinate": "-78.510349"
+  },
+  {
+  "building_name": "Physics Building",
+  "x_coordinate": "38.034255",
+  "y_coordinate": "-78.510248"
+  },
+  {
+  "building_name": "Rice Hall",
+  "x_coordinate": "38.031639",
+  "y_coordinate": "-78.510811"
+  },
+  {
+  "building_name": "Robertson Hall",
+  "x_coordinate": "38.03308",
+  "y_coordinate": "-78.504122"
+  },
+  {
+  "building_name": "Rouss Hall",
+  "x_coordinate": "38.03308",
+  "y_coordinate": "-78.504122"
+  },
+  {
+  "building_name": "Rouss/Robertson",
+  "x_coordinate": "38.03288033",
+  "y_coordinate": "-78.50438646"
+  },
+  {
+  "building_name": "Runk",
+  "x_coordinate": "38.02876655",
+  "y_coordinate": "-78.518471"
+  },
+  {
+  "building_name": "Scott Stadium",
+  "x_coordinate": "38.03089",
+  "y_coordinate": "-78.51204"
+  },
+  {
+  "building_name": "Small Hall",
+  "x_coordinate": "38.03217",
+  "y_coordinate": "-78.51097"
+  },
+  {
+  "building_name": "Student Activities Building",
+  "x_coordinate": "38.02947",
+  "y_coordinate": "-78.51514"
+  },
+  {
+  "building_name": "Student Health",
+  "x_coordinate": "38.031976",
+  "y_coordinate": "-78.502936"
+  },
+  {
+  "building_name": "The Castle",
+  "x_coordinate": "38.03546",
+  "y_coordinate": "-78.510467"
+  },
+  {
+  "building_name": "The Corner",
+  "x_coordinate": "38.0345",
+  "y_coordinate": "-78.5001"
+  },
+  {
+  "building_name": "The Lawn",
+  "x_coordinate": "38.03548",
+  "y_coordinate": "-78.50372"
+  },
+  {
+  "building_name": "Thornton Hall",
+  "x_coordinate": "38.033304",
+  "y_coordinate": "-78.509738"
+  },
+  {
+  "building_name": "University Hall",
+  "x_coordinate": "38.04518",
+  "y_coordinate": "-78.50843"
+  },
+  {
+  "building_name": "Vaughn Hall",
+  "x_coordinate": "38.03058",
+  "y_coordinate": "-78.518922"
+  },
+  {
+  "building_name": "Wilsdorf",
+  "x_coordinate": "38.033",
+  "y_coordinate": "-78.5113"
+  },
+  {
+  "building_name": "Wilson Hall",
+  "x_coordinate": "38.032503",
+  "y_coordinate": "-78.504009');"
+  }
+  ]
