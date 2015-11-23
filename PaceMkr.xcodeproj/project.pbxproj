@@ -13,6 +13,8 @@
 		7D57E24F1BD88F760000E586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E24E1BD88F760000E586 /* Foundation.framework */; };
 		7D57E2511BD88F820000E586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E2501BD88F820000E586 /* UIKit.framework */; };
 		7D57E2531BD898010000E586 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57E2521BD898010000E586 /* CoreGraphics.framework */; };
+		7D83696A1C02F2A7009FA5D5 /* LocationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8369691C02F2A7009FA5D5 /* LocationsController.m */; };
+		7D83696C1C02F950009FA5D5 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D83696B1C02F950009FA5D5 /* locations.json */; };
 		DD26F4A71BE7D65F0035E8C8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */; };
 		DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B39A81BD778E200505BEA /* YouAreHereController.m */; };
 		DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */; };
@@ -60,6 +62,9 @@
 		7D57E24E1BD88F760000E586 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7D57E2501BD88F820000E586 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7D57E2521BD898010000E586 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D8369681C02F2A7009FA5D5 /* LocationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsController.h; sourceTree = "<group>"; };
+		7D8369691C02F2A7009FA5D5 /* LocationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsController.m; sourceTree = "<group>"; };
+		7D83696B1C02F950009FA5D5 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		DD26F4A51BE7D65F0035E8C8 /* PaceMkr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PaceMkr.entitlements; sourceTree = SOURCE_ROOT; };
 		DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		DD5B39A71BD778E200505BEA /* YouAreHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouAreHereController.h; sourceTree = "<group>"; };
@@ -173,6 +178,9 @@
 				DDCFC8A51BE82FFC00D6FF51 /* HeartRateViewController.m */,
 				DDCFC8A91BEAB87100D6FF51 /* NoWatchViewController.h */,
 				DDCFC8AA1BEAB87100D6FF51 /* NoWatchViewController.m */,
+				7D8369681C02F2A7009FA5D5 /* LocationsController.h */,
+				7D8369691C02F2A7009FA5D5 /* LocationsController.m */,
+				7D83696B1C02F950009FA5D5 /* locations.json */,
 			);
 			name = PaceMkr;
 			path = Milestone1;
@@ -332,6 +340,7 @@
 				DDD1CF1E1BD6D4F50016656E /* Main.storyboard in Resources */,
 				DDD1CF4D1BD6F10E0016656E /* earth-no-background.png in Resources */,
 				DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */,
+				7D83696C1C02F950009FA5D5 /* locations.json in Resources */,
 				DDCFC8A81BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D83696A1C02F2A7009FA5D5 /* LocationsController.m in Sources */,
 				DDCFC8AB1BEAB87100D6FF51 /* NoWatchViewController.m in Sources */,
 				DDD1CF1B1BD6D4F50016656E /* ViewController.m in Sources */,
 				DDD1CF181BD6D4F50016656E /* AppDelegate.m in Sources */,
