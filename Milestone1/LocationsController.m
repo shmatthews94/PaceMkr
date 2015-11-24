@@ -12,7 +12,6 @@
 
 @interface LocationsController ()
 @property (nonatomic, strong) NSMutableArray *locations;
-@property (nonatomic, strong) NSDictionary *locationlist;
 @property bool found;
 @end
 
@@ -20,12 +19,10 @@ extern CLLocation *Location1;
 
 @implementation LocationsController
 
-- (void)fetchGreeting;
+- (void)fetchLocations;
 {
     NSLog(@"Fetching...");
     NSURLSession *session = [NSURLSession sharedSession];
-    // http://myjson.com/4h9hd
-    // https://raw.githubusercontent.com/shmatthews94/PaceMkr/master/Milestone1/locations.json
     [[session dataTaskWithURL:[NSURL URLWithString:@"https://api.myjson.com/bins/4oz9d"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
@@ -37,7 +34,7 @@ extern CLLocation *Location1;
                                                                      options:0
                                                                        error:&jsonError];
                 if(jsonError) {
-                    NSLog(@"WHAT THE FUCK");
+                    NSLog(@"Error reading JSON!");
                 }
                 else {
                     NSLog(@"Success, locations length is %i", self.locations.count);
@@ -58,7 +55,7 @@ extern CLLocation *Location1;
 {
     [super viewDidLoad];
     self.locations = [[NSMutableArray alloc] init];
-    [self fetchGreeting];
+    [self fetchLocations];
 }
 
 - (void)didReceiveMemoryWarning

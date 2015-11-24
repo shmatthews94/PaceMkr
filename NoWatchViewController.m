@@ -47,10 +47,10 @@ extern NSString *THR;
         HeartRate.textColor = [UIColor redColor];
     }
     
-    if(diff == 0){
+    if(rate > (targHR - 10) && rate < (targHR + 10)){
         ChangeRate.text = [NSString stringWithFormat:@"Keep it up!"];
         
-    }else if (diff > 0){
+    }else if (diff > 10){
         ChangeRate.text = [NSString stringWithFormat:@"Increase BPM by: %d", diff];
     }else{
         diff = (diff * -1);

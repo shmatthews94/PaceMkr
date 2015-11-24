@@ -986,7 +986,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baK-UL-Dt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="1398"/>
+            <point key="canvasLocation" x="992" y="1215"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="biH-MP-DhM">
@@ -1081,7 +1081,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wa-9q-Ji2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="391"/>
+            <point key="canvasLocation" x="1694" y="403"/>
         </scene>
         <!--No Watch View Controller-->
         <scene sceneID="R7I-gU-pZq">
@@ -1391,7 +1391,7 @@
         <image name="maps1.png" width="276" height="296"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Brg-6y-tEk"/>
+        <segue reference="0Qn-Um-NSr"/>
         <segue reference="yVc-Vb-LI2"/>
     </inferredMetricsTieBreakers>
 </document>

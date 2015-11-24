@@ -11,12 +11,10 @@
 
 @interface LocationsController : UIViewController <UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 
-@property (nonatomic, strong) IBOutlet UILabel *greetingId;
-@property (nonatomic, strong) IBOutlet UILabel *greetingContent;
 @property (nonatomic, retain) IBOutlet UITableView *locationtable;
 @property (nonatomic,retain) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *current;
 
-- (IBAction)fetchGreeting;
+- (IBAction)fetchLocations;
 
 @end
