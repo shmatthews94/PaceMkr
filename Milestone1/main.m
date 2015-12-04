@@ -17,7 +17,6 @@ NSString *CurrentHR;
 NSDecimalNumber *TotalDistance;
 CLLocation *Location1;
 CLLocation *Location2;
-NSMutableArray *locations;
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

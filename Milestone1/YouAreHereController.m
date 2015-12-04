@@ -50,6 +50,7 @@ extern CLLocation *Location2;
     [locationManager startUpdatingLocation];
     name.text = NameID;
     targetheartrate.text = THR;
+    CurrentHR = @"-";
     currentheartrate.text = CurrentHR;
     mainDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     

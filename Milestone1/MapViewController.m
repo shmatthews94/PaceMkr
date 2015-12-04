@@ -120,48 +120,7 @@ extern CLLocation *Location2;
                 NSLog(@"%@", error.debugDescription);
             }
         } ];
-}
-    
-    
-    /*
-    CLLocation *newLocation = [[CLLocation alloc] initWithLatitude:self.locationManager.location.coordinate.latitude
-                                                         longitude:self.locationManager.location.coordinate.longitude];
-    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-        
-        if (error == nil) {
-            
-            Location1 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
-            CLLocationDistance distance = [Location2 distanceFromLocation:Location1];
-            double diffmiles = distance/1609.34;
-            double total = [TotalDistance doubleValue];
-            double new = total + diffmiles;
-            double new2 = floorf(new * 100) / 100;
-            NSLog(@"Total Distance is: %f", new);
-            NSLog(@"lat is %f : lon is %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
-            NSDecimalNumber *finaltotal = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:new2];
-            TotalDistance = finaltotal;
-            MKMapPoint * pointsArray = malloc(sizeof(CLLocationCoordinate2D)*50);
-            pointsArray[0]= MKMapPointForCoordinate(Location1.coordinate);
-            pointsArray[1]= MKMapPointForCoordinate(Location2.coordinate);
-                
-            self.routeLine = [MKPolyline polylineWithPoints:pointsArray count:2];
-            free(pointsArray);
-            
-            Location2 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
-            
-            NSLog(@"lat is %f : lon is %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
-            
-        } else {
-            NSLog(@"%@", error.debugDescription);
-        }
-    } ];
-    [locationManager stopUpdatingLocation];
-    
-    
-
-    [[self mapView] addOverlay:self.routeLine];
-    */
-    
+    }
 }
 
 #pragma mark - MKMapViewDelegate
