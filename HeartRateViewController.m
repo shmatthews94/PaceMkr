@@ -9,9 +9,20 @@
 #import "HeartRateViewController.h"
 #import "HKHealthStore+AAPLExtensions.h"
 
+@interface HKUnit (HKManager)
++ (HKUnit *)heartBeatsPerMinuteUnit;
+@end
 
+@implementation HKUnit (HKManager)
+
++ (HKUnit *)heartBeatsPerMinuteUnit {
+    return [[HKUnit countUnit] unitDividedByUnit:[HKUnit minuteUnit]];
+}
+
+@end
 
 @interface HeartRateViewController ()
+
 @property (nonatomic, weak) IBOutlet UILabel *heightValueLabel;
 @property (nonatomic, weak) IBOutlet UILabel *heightUnitLabel;
 
@@ -23,9 +34,59 @@
 
 
 
+- (void)readHealthKitData{
+    HKHealthStore *healthStore = [[HKHealthStore alloc] init];
+    NSSet *shareObjectTypes = [NSSet setWithObjects:
+                               nil];
+    NSSet *readObjectTypes  = [NSSet setWithObjects:
+                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning],
+                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate],
+                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierFlightsClimbed],
+                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount],
+                               nil];
+    // Request access
+    [healthStore requestAuthorizationToShareTypes:shareObjectTypes
+                                        readTypes:readObjectTypes
+                                       completion:^(BOOL success, NSError *error) {
+                                           if(success == YES)
+                                           {
+                                               //[self queryHealthData];
+                                               //[self queryHealthDataDistance];
+                                               //[self queryHealthDataFlights];
+                                               [self queryHealthDataHeart];
+                                           }
+                                           else
+                                           {
+                                               // Determine if it was an error or if the
+                                               // user just canceld the authorization request
+                                           }
+                                           
+                                       }];}
+
+- (void)queryHealthDataHeart{
+    HKQuantityType *typeHeart =[HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay
+                                               fromDate:now];
+    NSDate *beginOfDay = [calendar dateFromComponents:components];
+    NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:beginOfDay endDate:now options:HKQueryOptionStrictStartDate];
+    
+    HKStatisticsQuery *squery = [[HKStatisticsQuery alloc] initWithQuantityType:typeHeart quantitySamplePredicate:predicate options:HKStatisticsOptionDiscreteAverage completionHandler:^(HKStatisticsQuery *query, HKStatistics *result, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            HKQuantity *quantity = result.averageQuantity;
+            double beats = [quantity doubleValueForUnit:[HKUnit heartBeatsPerMinuteUnit]];
+            self.heightValueLabel.text = [NSString stringWithFormat:@"%.f",beats];
+        }
+                       );
+    }];
+    [self.healthStore executeQuery:squery];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self readHealthKitData];
     NSString *HeartBeat;
     HeartBeat = @"000 BPM";
     NSDate *now = [NSDate date];
@@ -164,8 +225,10 @@
 
 
 - (IBAction)updateUsersHeighLabel:(id)sender {
-    [self updateUsersHeightLabel];
+    //[self updateUsersHeightLabel];
+    [self queryHealthDataHeart];
 }
+
 
 
 - (void)updateUsersHeightLabel {
