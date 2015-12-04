@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@import HealthKit;
+
 @interface HeartRateViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *HeartRate;
+@property (nonatomic) HKHealthStore *healthStore;
 
 
 @end

@@ -8,7 +8,12 @@
 
 #import "AppDelegate.h"
 
+@import HealthKit;
+
+
 @interface AppDelegate ()
+
+@property (nonatomic) HKHealthStore *healthStore;
 
 @end
 
@@ -17,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.healthStore = [[HKHealthStore alloc] init];
+
     return YES;
 }
 

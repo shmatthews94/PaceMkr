@@ -17,10 +17,11 @@
 		7D83696C1C02F950009FA5D5 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D83696B1C02F950009FA5D5 /* locations.json */; };
 		7D83696F1C030064009FA5D5 /* LocationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D83696E1C030064009FA5D5 /* LocationsTableViewCell.m */; };
 		7DC223FB1C03A6DA00ACAC4D /* locations2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DC223FA1C03A6DA00ACAC4D /* locations2.json */; };
-		7DC223FD1C03AFB100ACAC4D /* maps1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC223FC1C03AFB100ACAC4D /* maps1.png */; };
 		7DC223FF1C03B0B400ACAC4D /* locations3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DC223FE1C03B0B400ACAC4D /* locations3.json */; };
+		DD26D0131C04233800AB8CE0 /* maps1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = DD26D0121C04233800AB8CE0 /* maps1-1.png */; };
 		DD26F4A71BE7D65F0035E8C8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */; };
 		DD5B39A91BD778E200505BEA /* YouAreHereController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B39A81BD778E200505BEA /* YouAreHereController.m */; };
+		DD67EEA11C11678300F22CDC /* HKHealthStore+AAPLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD67EEA01C11678300F22CDC /* HKHealthStore+AAPLExtensions.m */; };
 		DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */; };
 		DDCFC8A61BE82FFC00D6FF51 /* HeartRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCFC8A51BE82FFC00D6FF51 /* HeartRateViewController.m */; };
 		DDCFC8A81BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCFC8A71BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png */; };
@@ -72,12 +73,14 @@
 		7D83696D1C030064009FA5D5 /* LocationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewCell.h; sourceTree = "<group>"; };
 		7D83696E1C030064009FA5D5 /* LocationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewCell.m; sourceTree = "<group>"; };
 		7DC223FA1C03A6DA00ACAC4D /* locations2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations2.json; sourceTree = "<group>"; };
-		7DC223FC1C03AFB100ACAC4D /* maps1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maps1.png; path = ../../../Documents/199DryClean/199DryClean/maps1.png; sourceTree = "<group>"; };
 		7DC223FE1C03B0B400ACAC4D /* locations3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations3.json; sourceTree = "<group>"; };
+		DD26D0121C04233800AB8CE0 /* maps1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maps1-1.png"; sourceTree = "<group>"; };
 		DD26F4A51BE7D65F0035E8C8 /* PaceMkr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PaceMkr.entitlements; sourceTree = SOURCE_ROOT; };
 		DD26F4A61BE7D65F0035E8C8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		DD5B39A71BD778E200505BEA /* YouAreHereController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouAreHereController.h; sourceTree = "<group>"; };
 		DD5B39A81BD778E200505BEA /* YouAreHereController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouAreHereController.m; sourceTree = "<group>"; };
+		DD67EE9F1C11678300F22CDC /* HKHealthStore+AAPLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HKHealthStore+AAPLExtensions.h"; sourceTree = "<group>"; };
+		DD67EEA01C11678300F22CDC /* HKHealthStore+AAPLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HKHealthStore+AAPLExtensions.m"; sourceTree = "<group>"; };
 		DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medical_heart_rate-512.png"; sourceTree = "<group>"; };
 		DDCFC8A41BE82FFC00D6FF51 /* HeartRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateViewController.h; sourceTree = SOURCE_ROOT; };
 		DDCFC8A51BE82FFC00D6FF51 /* HeartRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRateViewController.m; sourceTree = SOURCE_ROOT; };
@@ -171,6 +174,8 @@
 				DD26F4A51BE7D65F0035E8C8 /* PaceMkr.entitlements */,
 				DDD1CF161BD6D4F50016656E /* AppDelegate.h */,
 				DDD1CF171BD6D4F50016656E /* AppDelegate.m */,
+				DD67EE9F1C11678300F22CDC /* HKHealthStore+AAPLExtensions.h */,
+				DD67EEA01C11678300F22CDC /* HKHealthStore+AAPLExtensions.m */,
 				DDD1CF191BD6D4F50016656E /* ViewController.h */,
 				DDD1CF1A1BD6D4F50016656E /* ViewController.m */,
 				DDD1CF1C1BD6D4F50016656E /* Main.storyboard */,
@@ -202,7 +207,7 @@
 		DDD1CF131BD6D4F50016656E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DC223FC1C03AFB100ACAC4D /* maps1.png */,
+				DD26D0121C04233800AB8CE0 /* maps1-1.png */,
 				DDD1CF501BD6F3360016656E /* mapPinIcon.png */,
 				DDCFC8A21BE818D900D6FF51 /* Medical_heart_rate-512.png */,
 				DDD1CF4E1BD6F20C0016656E /* space-bg.jpg */,
@@ -348,6 +353,7 @@
 				DDD1CF471BD6EBD90016656E /* Screen Shot 2015-10-20 at 5.37.23 PM.png in Resources */,
 				DDD1CF231BD6D4F50016656E /* LaunchScreen.storyboard in Resources */,
 				DDD1CF201BD6D4F50016656E /* Assets.xcassets in Resources */,
+				DD26D0131C04233800AB8CE0 /* maps1-1.png in Resources */,
 				DDD1CF4B1BD6EFF20016656E /* the_univese_bg.jpg in Resources */,
 				DDD1CF4F1BD6F20C0016656E /* space-bg.jpg in Resources */,
 				DDD1CF511BD6F3360016656E /* mapPinIcon.png in Resources */,
@@ -356,7 +362,6 @@
 				7DC223FB1C03A6DA00ACAC4D /* locations2.json in Resources */,
 				DDCFC8A31BE818DA00D6FF51 /* Medical_heart_rate-512.png in Resources */,
 				7D83696C1C02F950009FA5D5 /* locations.json in Resources */,
-				7DC223FD1C03AFB100ACAC4D /* maps1.png in Resources */,
 				7DC223FF1C03B0B400ACAC4D /* locations3.json in Resources */,
 				DDCFC8A81BEAB68000D6FF51 /* Screen Shot 2015-11-04 at 4.55.08 PM.png in Resources */,
 			);
@@ -383,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD67EEA11C11678300F22CDC /* HKHealthStore+AAPLExtensions.m in Sources */,
 				7D83696A1C02F2A7009FA5D5 /* LocationsController.m in Sources */,
 				DDCFC8AB1BEAB87100D6FF51 /* NoWatchViewController.m in Sources */,
 				DDD1CF1B1BD6D4F50016656E /* ViewController.m in Sources */,
