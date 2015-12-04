@@ -186,7 +186,9 @@ extern CLLocation *Location2;
     
     NSDecimalNumber *zero = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:0.0];
     TotalDistance = zero;
-    
     Distance.text = [NSString stringWithFormat:@"0.00 mi"];
+    [locationManager stopUpdatingLocation];
+    [mainDelegate.sharedArray removeAllObjects];
+    [locationManager startUpdatingLocation];
 }
 @end
