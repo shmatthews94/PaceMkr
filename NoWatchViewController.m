@@ -18,6 +18,7 @@
 @synthesize bpmBox;
 @synthesize ChangeRate;
 extern NSString *THR;
+extern NSString *CurrentHR;
 
 
 - (void)viewDidLoad {
@@ -36,6 +37,7 @@ extern NSString *THR;
     int rate = [bpmBox.text intValue];
     int diff = targHR - rate;
     HeartRate.text = [NSString stringWithFormat:@"%d", rate];
+    CurrentHR = [NSString stringWithFormat:@"%d", rate];
     HeartRate.textColor = [UIColor blueColor];
     ChangeRate.textColor = [UIColor orangeColor];
 

@@ -27,6 +27,7 @@ extern NSDecimalNumber *TotalDistance;
     NSString *rounded  = [nf stringFromNumber:TotalDistance];
     Distance.text = [NSString stringWithFormat:@"%@ mi", rounded];
     self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     // Do any additional setup after loading the view.
 }
 

@@ -21,6 +21,7 @@
 
 extern NSString *NameID;
 extern NSString *THR;
+extern NSString *CurrentHR;
 extern NSDecimalNumber *TotalDistance;
 extern CLLocation *Location1;
 extern CLLocation *Location2;
@@ -34,6 +35,7 @@ extern CLLocation *Location2;
 @synthesize name;
 @synthesize data;
 @synthesize targetheartrate;
+@synthesize currentheartrate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,8 +47,9 @@ extern CLLocation *Location2;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startMonitoringSignificantLocationChanges];
     [locationManager startUpdatingLocation];
-    name.text = data;
-    
+    name.text = NameID;
+    targetheartrate.text = THR;
+    currentheartrate.text = CurrentHR;
     
 }
 
@@ -81,8 +84,8 @@ extern CLLocation *Location2;
             NSDecimalNumber *finaltotal = (NSDecimalNumber *) [NSDecimalNumber numberWithDouble:new2];
             TotalDistance = finaltotal;
             Location2 = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
-            latitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.latitude];
-            longitude.text = [NSString stringWithFormat:@"%f",newLocation.coordinate.longitude];
+            latitude.text = [[NSString stringWithFormat:@"%f",newLocation.coordinate.latitude] substringWithRange:NSMakeRange(0, 5)];
+            longitude.text = [[NSString stringWithFormat:@"%f",newLocation.coordinate.longitude]substringWithRange:NSMakeRange(0, 6)];
             name.text = NameID;
             targetheartrate.text = THR;
             placemark2 = [placemarks lastObject];

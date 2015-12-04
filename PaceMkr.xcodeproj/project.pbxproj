@@ -307,7 +307,7 @@
 				TargetAttributes = {
 					DDD1CF0F1BD6D4F50016656E = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 59U4TU4946;
+						DevelopmentTeam = 6MR8V5G8AF;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -543,7 +543,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Milestone1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ChaneMeets.PaceMkr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PaceMkr;
 				PRODUCT_NAME = PaceMkr;
 				PROVISIONING_PROFILE = "";
 			};
@@ -558,7 +558,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Milestone1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ChaneMeets.PaceMkr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PaceMkr;
 				PRODUCT_NAME = PaceMkr;
 				PROVISIONING_PROFILE = "";
 			};

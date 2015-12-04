@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *longitude;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *targetheartrate;
+@property (weak, nonatomic) IBOutlet UILabel *currentheartrate;
 @property (nonatomic, retain) NSString *data;
 @end

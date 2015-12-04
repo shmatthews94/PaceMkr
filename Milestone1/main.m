@@ -13,6 +13,7 @@
 NSString *NameID;
 NSString *Age;
 NSString *THR;
+NSString *CurrentHR;
 NSDecimalNumber *TotalDistance;
 CLLocation *Location1;
 CLLocation *Location2;
