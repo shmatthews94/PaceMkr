@@ -71,14 +71,14 @@
                                                fromDate:now];
     NSDate *beginOfDay = [calendar dateFromComponents:components];
     NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:beginOfDay endDate:now options:HKQueryOptionStrictStartDate];
-    
+    NSLog(@"About to query");
     HKStatisticsQuery *squery = [[HKStatisticsQuery alloc] initWithQuantityType:typeHeart quantitySamplePredicate:predicate options:HKStatisticsOptionDiscreteAverage completionHandler:^(HKStatisticsQuery *query, HKStatistics *result, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             HKQuantity *quantity = result.averageQuantity;
             double beats = [quantity doubleValueForUnit:[HKUnit heartBeatsPerMinuteUnit]];
+            NSLog([NSString stringWithFormat:@"Heart rate average: %@", quantity]);
             self.heightValueLabel.text = [NSString stringWithFormat:@"%.f",beats];
-        }
-                       );
+        });
     }];
     [self.healthStore executeQuery:squery];
 }
@@ -228,8 +228,45 @@
     //[self updateUsersHeightLabel];
     [self queryHealthDataHeart];
 }
+/*
 
-
+- (void)readHeight {
+    
+    //HKUnit *preferredUnit = [self getUnit:unit:@"HKLengthUnit"];
+    
+    // Query to get the user's latest height, if it exists.
+    HKQuantityType *heightType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight];
+    NSSet *requestTypes = [NSSet setWithObjects: heightType, nil];
+    // always ask for read and write permission if the app uses both, because granting read will remove write for the same type :(
+    
+    [self.healthStore requestAuthorizationToShareTypes:requestWritePermission ? requestTypes : nil readTypes:requestTypes completion:^(BOOL success, NSError *error) {
+        if (success) {
+            [self.healthStore aapl_mostRecentQuantitySampleOfType:heightType predicate:nil completion:^(HKQuantity *mostRecentQuantity, NSDate *mostRecentDate, NSError *errorInner) { // TODO use
+                if (mostRecentQuantity) {
+                    double usersHeight = [mostRecentQuantity doubleValueForUnit:preferredUnit];
+                    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+                    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+                    NSMutableDictionary *entry = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                                  [NSNumber numberWithDouble:usersHeight], HKPluginKeyValue,
+                                                  unit, HKPluginKeyUnit,
+                                                  [df stringFromDate:mostRecentDate], @"date",
+                                                  nil];
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:errorInner.localizedDescription];
+                        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+                    });
+                }
+            }];
+        } else {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:error.localizedDescription];
+                [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+            });
+        }
+    }];
+}
+ */
 
 - (void)updateUsersHeightLabel {
     // Fetch user's default height unit in inches.

@@ -36,6 +36,7 @@ extern CLLocation *Location2;
 @synthesize data;
 @synthesize targetheartrate;
 @synthesize currentheartrate;
+@synthesize mainDelegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,6 +51,7 @@ extern CLLocation *Location2;
     name.text = NameID;
     targetheartrate.text = THR;
     currentheartrate.text = CurrentHR;
+    mainDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     
 }
 

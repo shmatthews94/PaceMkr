@@ -17,13 +17,16 @@
 
 @end
 
+
 @implementation AppDelegate
+@synthesize sharedArray;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.healthStore = [[HKHealthStore alloc] init];
-
+    sharedArray = [[NSMutableArray alloc]init];
+    
     return YES;
 }
 

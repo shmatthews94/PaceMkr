@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AppDelegate.h"
 
 
 @interface YouAreHereController : UIViewController <CLLocationManagerDelegate>
@@ -21,4 +22,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *targetheartrate;
 @property (weak, nonatomic) IBOutlet UILabel *currentheartrate;
 @property (nonatomic, retain) NSString *data;
+@property (nonatomic, retain) AppDelegate *mainDelegate;
 @end
